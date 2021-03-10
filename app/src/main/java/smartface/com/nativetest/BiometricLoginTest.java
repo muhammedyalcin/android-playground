@@ -10,11 +10,9 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.exoplayer2.util.Log;
 
 import java.util.concurrent.Executor;
 
@@ -37,9 +35,7 @@ public class BiometricLoginTest extends AppCompatActivity {
         });
 
         Executor executor = ContextCompat.getMainExecutor(this);
-        BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor,
-                new BiometricPrompt.AuthenticationCallback() {
-
+        BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
                     @Override
                     public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                         super.onAuthenticationSucceeded(result);
@@ -61,10 +57,6 @@ public class BiometricLoginTest extends AppCompatActivity {
                 .setNegativeButtonText("NegativeButton")
                 .setConfirmationRequired(true)
                 .build();
-
-
-        boolean isThereFaceID = getPackageManager().hasSystemFeature(PackageManager.FEATURE_FACE);
-        boolean isThereFingerPrint = getPackageManager().hasSystemFeature(PackageManager.FEATURE_FINGERPRINT);
 
         Button btn = findViewById(R.id.biometricLoginBtn);
 
@@ -92,8 +84,8 @@ public class BiometricLoginTest extends AppCompatActivity {
 ////                    startActivityForResult(enrollIntent, REQUEST_CODE);
 //                    break;
 //            }
-//
-//            biometricPrompt.authenticate(promptInfo);
+
+            biometricPrompt.authenticate(promptInfo);
         });
     }
 }
