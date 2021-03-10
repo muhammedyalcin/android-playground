@@ -9,7 +9,7 @@
 
 # Java class files
 *.class
-
+.idea/*
 # Generated files
 bin/
 gen/
@@ -20,6 +20,8 @@ out/
 # Gradle files
 .gradle/
 build/
+
+projectFilesBackup/*
 
 # Local configuration file (sdk path, etc)
 local.properties

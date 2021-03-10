@@ -1,0 +1,164 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+
+        <!--<item name="actionBarTabTextStyle">@style/SFWidget.Light.ActionBar.TabText</item>-->
+
+        <!--<item name="actionMenuTextAppearance">@style/SFTextAppearance.Widget.ActionBar.Menu</item>-->
+
+        <!--<item name="textAppearanceSearchResultTitle">@style/SFTextAppearance.SearchResult.Title</item>-->
+        <!--<item name="textAppearanceSearchResultSubtitle">@style/SFTextAppearance.SearchResult.Subtitle</item>-->
+
+        <!--<item name="android:textAppearanceLarge">@style/SFTextAppearance.Large</item>-->
+        <!--<item name="android:textAppearanceMedium">@style/SFTextAppearance.Medium</item>-->
+        <!--<item name="android:textAppearanceSmall">@style/SFTextAppearance.Small</item>-->
+
+        <!--<item name="android:textAppearanceMediumInverse">@style/SFTextAppearance.Medium.Inverse</item>-->
+        <!--<item name="android:textAppearanceSmallInverse">@style/SFTextAppearance.Small.Inverse</item>-->
+        <!--<item name="android:textAppearanceLargeInverse">@style/SFTextAppearance.Large.Inverse</item>-->
+
+        <!--<item name="android:textAppearanceButton">@style/SFTextAppearance.Widget.Button</item>-->
+
+        <!--<item name="android:textAppearance">@style/SFTextAppearance.AppCompat</item>-->
+
+        <item name="alertDialogTheme">@style/SFThemeOverlay.AppCompat.Dialog.Alert</item>
+
+        <!--<item name="tabStyle">@style/TabLayoutPower</item>-->
+
+
+        <!--<item name="android:textAppearanceInverse">@style/SFTextAppearance.Light.Inverse</item> ? ????????????????????
+
+         <item name="dialogTheme">@style/ThemeOverlay.AppCompat.Dialog</item>
+        <item name="dialogPreferredPadding">@dimen/abc_dialog_padding_material</item>
+        <item name="dialogCornerRadius">@dimen/abc_dialog_corner_radius_material</item>
+
+        <item name="alertDialogTheme">@style/ThemeOverlay.AppCompat.Dialog.Alert</item>-->
+
+    </style>
+
+
+    <style name="SpinnerTimePickerDialog" parent="Theme.AppCompat.DayNight.Dialog" tools:targetApi="lollipop">
+        <!--<item name="android:timePickerStyle">@style/SpinnerTimePickerStyle</item>-->
+    </style>
+
+    <!--<style name="SpinnerTimePickerStyle" parent="android:Widget.Material.Light.TimePicker" tools:targetApi="lollipop">-->
+        <!--<item name="android:timePickerMode">spinner</item>-->
+    <!--</style>-->
+
+
+    <style name="SFThemeOverlay.AppCompat.Dialog.Alert" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/SFRtlOverlay.DialogWindowTitle.AppCompat</item>
+    </style>
+
+    <style name="SFRtlOverlay.DialogWindowTitle.AppCompat" parent="RtlOverlay.DialogWindowTitle.AppCompat">
+        <item name="android:textAppearance">@style/SFTextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="SFTextAppearance.AppCompat.Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">5dp</item>
+    </style>
+
+
+    <!--<style name="TabLayoutPower" parent="Widget.Design.TabLayout">-->
+        <!--<item name="tabTextAppearance">@android:color/white</item>-->
+    <!--</style>-->
+
+    <style name="SFTextAppearance.SearchResult.Title" parent="TextAppearance.AppCompat.SearchResult.Title">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="SFTextAppearance.SearchResult.Subtitle" parent="TextAppearance.AppCompat.SearchResult.Subtitle">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Widget.ActionBar.Menu" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SFWidget.Light.ActionBar.TabText" parent="Widget.AppCompat.Light.ActionBar.TabText">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Widget.Button" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">22dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Medium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Medium.Inverse" parent="TextAppearance.AppCompat.Medium.Inverse">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Small" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Small.Inverse" parent="TextAppearance.AppCompat.Small.Inverse">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="SFTextAppearance.Large.Inverse" parent="TextAppearance.AppCompat.Large.Inverse">
+        <item name="android:textSize">22dp</item>
+    </style>
+
+    <style name="SFTextAppearance.AppCompat" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeSecond" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textCursorDrawable">@color/white</item>
+        <item name="android:colorEdgeEffect">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <style name="SFMaterialTextboxHint" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">35dp</item>
+    </style>
+
+
+    <style name="popup_window_animation">
+        <item name="android:windowEnterAnimation">@anim/onshow_animation</item>
+        <item name="android:windowExitAnimation">@anim/ondismiss_animation</item>
+    </style>
+
+    <style name="ScrollBarRecyclerView" parent="android:Widget">
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">@color/lightgray</item>
+    </style>
+
+    <style name="MyStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="gave_text">Test</item>
+    </style>
+
+    <style name="SwitchCompatStyle" >
+        <item name="thumbTint">@color/white</item>
+    </style>
+
+
+    
+
+</resources>

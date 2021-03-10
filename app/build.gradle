@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+def buildEmulator=true
+def camerax_version = "1.0.0-beta09"
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId 'smartface.com.nativetest'
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "0.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+    }
+    lintOptions {
+        abortOnError true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles 'proguard-rules.pro'
+            jniDebuggable false
+            debuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        javaMaxHeapSize "6g"
+        preDexLibraries(true)
+        setThreadCount(8)
+        setMaxProcessCount(8)
+        setJumboMode(true)
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.2.0-beta01'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation fileTree(include: ['*.jar'], dir: 'src/main/libs')
+
+    implementation 'com.mixpanel.android:mixpanel-android:4.9.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    implementation 'androidx.transition:transition:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.4.7'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+    implementation 'com.facebook.shimmer:shimmer:0.3.0@aar'
+    implementation 'androidx.browser:browser:1.0.0'
+
+//    implementation 'com.google.android.gms:play-services-base:15.0.1
+    implementation 'com.google.android.gms:play-services-safetynet:15.0.0'
+
+    implementation 'com.google.android.gms:play-services-vision:15.0.2'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
+//    implementation 'com.google.firebase:firebase-core:16.0.4'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    implementation (project(":materialrangebar")) {
+        exclude module: 'support-compat'
+    }
+
+    implementation 'com.github.yalantis:ucrop:2.2.4'
+
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.14'
+    androidTestImplementation 'androidx.test:rules:1.1.0'
+
+    implementation 'com.yqritc:android-scalablevideoview:1.0.4'
+    implementation 'com.devbrackets.android:exomedia:4.3.0'
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.12.0'
+
+    implementation "androidx.biometric:biometric:1.1.0"
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+googleServices.disableVersionCheck = true
+
