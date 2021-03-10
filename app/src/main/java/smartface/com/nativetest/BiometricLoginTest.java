@@ -23,16 +23,6 @@ public class BiometricLoginTest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_native_test);
 
-        EditText editText = findViewById(R.id.editText);
-
-        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                EditText editText1 = (EditText) view;
-                Editable text = editText.getText();
-                System.out.println(text.toString());
-            }
-        });
 
         Executor executor = ContextCompat.getMainExecutor(this);
         BiometricPrompt biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
@@ -61,8 +51,6 @@ public class BiometricLoginTest extends AppCompatActivity {
         Button btn = findViewById(R.id.biometricLoginBtn);
 
         btn.setOnClickListener((view) -> {
-            editText.setSelection(0, 0);
-            editText.clearFocus();
 
 //            BiometricManager biometricManager = BiometricManager.from(this);
 //            int authenticateType = biometricManager.canAuthenticate(BiometricManager.Authenticators.BIOMETRIC_STRONG);
